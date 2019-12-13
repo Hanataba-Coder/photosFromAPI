@@ -1,0 +1,6 @@
+framework module Pods_showPhotosFromAPI {
+  umbrella header "Pods-showPhotosFromAPI-umbrella.h"
+
+  export *
+  module * { export * }
+}
