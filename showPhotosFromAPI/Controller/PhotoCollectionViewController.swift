@@ -1,6 +1,6 @@
 //
 //  PhotoCollectionViewController.swift
-//  unsplashAPI
+//  showPhotosFromAPI
 //
 //  Created by Hanataba on 11/12/2562 BE.
 //  Copyright © 2562 Hanataba. All rights reserved.
