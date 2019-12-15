@@ -11,6 +11,7 @@ import UIKit
 class Photo  {
     var thumbnail: UIImage?
     var regular: UIImage?
+    var userImage : UIImage?
     
     let name : String
     let description : String

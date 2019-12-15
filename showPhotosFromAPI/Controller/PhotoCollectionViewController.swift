@@ -19,7 +19,7 @@ class PhotoCollectionViewController: UICollectionViewController {
                                      left: 2.0,
                                      bottom: 1.0,
                                      right: 2.0)
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,7 +38,13 @@ class PhotoCollectionViewController: UICollectionViewController {
     }
     
     func updateCollection() {
+        let activityIndicator = UIActivityIndicatorView(style: .gray)
+        collectionView.addSubview(activityIndicator)
+        activityIndicator.frame = collectionView.bounds
+        activityIndicator.startAnimating()
+        
         photoApi.execute { (result) in
+            activityIndicator.stopAnimating()
             self.photos = try! result.get().results
             try! print(result.get().results[0].download)
             self.collectionView.reloadData()

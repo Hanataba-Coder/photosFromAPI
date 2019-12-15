@@ -41,16 +41,19 @@ class PhotoAPI{
                         let thumbUrl = URL(string: "\(JSON["urls"]["thumb"])"),
                         let thumbImageData = try? Data(contentsOf: thumbUrl),
                         let regularUrl = URL(string: "\(JSON["urls"]["regular"])"),
-                        let regularImageData = try? Data(contentsOf: regularUrl)
+                        let regularImageData = try? Data(contentsOf: regularUrl),
+                        let userImageUrl = URL(string: "\(JSON["user"]["profile_image"]["medium"])"),
+                        let userImageData = try? Data(contentsOf: userImageUrl)
                         else {
                             return nil
                     }
                     
                     let photo = Photo(name: name, description: description, like: like, view: view, download: download)
                     
-                    if let thumbImage = UIImage(data: thumbImageData), let regularImage = UIImage(data: regularImageData) {
+                    if let thumbImage = UIImage(data: thumbImageData), let regularImage = UIImage(data: regularImageData), let userImage = UIImage(data: userImageData) {
                         photo.thumbnail = thumbImage
                         photo.regular = regularImage
+                        photo.userImage = userImage
                     }
                 
                     return photo

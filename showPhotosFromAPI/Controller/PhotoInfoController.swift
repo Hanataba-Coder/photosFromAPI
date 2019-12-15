@@ -16,6 +16,7 @@ class PhotoInfoController: UIViewController {
     @IBOutlet weak var likeLabel: UILabel!
     @IBOutlet weak var ViewLabel: UILabel!
     @IBOutlet weak var downloadLabel: UILabel!
+    @IBOutlet weak var userImage: UIImageView!
     
     
     var photo : Photo?
@@ -24,12 +25,15 @@ class PhotoInfoController: UIViewController {
         guard let currentPhoto = photo else {
             return
         }
+        userImage.layer.cornerRadius = userImage.frame.width / 2
         imageView.image = currentPhoto.regular
+        userImage.image = currentPhoto.userImage
         userLabel.text = currentPhoto.name
         descriptionLabel.text = currentPhoto.description
         likeLabel.text = addDecimal(number: currentPhoto.like)
         ViewLabel.text = addDecimal(number: currentPhoto.view)
         downloadLabel.text = addDecimal(number: currentPhoto.download)
+        
     }
     
     override func viewDidLoad() {
