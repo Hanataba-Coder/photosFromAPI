@@ -15,10 +15,14 @@ class Photo  {
     let name : String
     let description : String
     let like : Int
+    let view : Int
+    let download : Int
     
-    init(name : String, description : String, like : Int) {
+    init(name : String, description : String, like : Int, view : Int, download : Int) {
         self.name = name
         self.description = description
         self.like = like
+        self.view = view
+        self.download = download
     }
 }

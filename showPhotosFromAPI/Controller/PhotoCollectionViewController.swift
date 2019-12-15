@@ -40,14 +40,14 @@ class PhotoCollectionViewController: UICollectionViewController {
     func updateCollection() {
         photoApi.execute { (result) in
             self.photos = try! result.get().results
-            try! print(result.get().results[0].name)
+            try! print(result.get().results[0].download)
             self.collectionView.reloadData()
         }
     }
     
 }
 
-//MARK: - UICollectionViewDelegate
+//MARK: - UICollectionViewDelegate and Segue
 extension PhotoCollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         performSegue(withIdentifier: segueIden, sender: self)
@@ -65,7 +65,7 @@ extension PhotoCollectionViewController {
 //MARK: - UICollectionViewDataSource
 extension PhotoCollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        print(photos.count)
+        print("number of cells : \(photos.count)")
         return photos.count
     }
     
