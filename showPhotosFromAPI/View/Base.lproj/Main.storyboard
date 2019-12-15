@@ -89,14 +89,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Like:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tcJ-um-jSm">
-                                <rect key="frame" x="19.999999999999996" y="715" width="35.666666666666657" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="like num" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VgO-MS-UdN">
-                                <rect key="frame" x="62.666666666666657" y="715" width="63.333333333333343" height="21"/>
+                                <rect key="frame" x="93.666666666666671" y="722.66666666666663" width="63.333333333333329" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -179,27 +173,49 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bo5-ec-jrl" userLabel="Like">
+                                <rect key="frame" x="19.999999999999996" y="719.66666666666663" width="63.666666666666657" height="27"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="heart.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="uFV-aY-zJm">
+                                        <rect key="frame" x="0.0" y="2" width="24" height="24"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Like:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tcJ-um-jSm">
+                                        <rect key="frame" x="28" y="3" width="35.666666666666657" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="63.670000000000002" id="OJN-80-5wt"/>
+                                    <constraint firstAttribute="height" constant="27" id="rjs-Kc-fbE"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="GMj-Lc-U1B" firstAttribute="leading" secondItem="9Fn-3Q-dhv" secondAttribute="trailing" constant="10" id="0GQ-Hp-vDz"/>
                             <constraint firstItem="tsh-Gj-baw" firstAttribute="leading" secondItem="HfS-bL-L7y" secondAttribute="leading" constant="20" id="3Nk-S9-tUK"/>
                             <constraint firstItem="9Fn-3Q-dhv" firstAttribute="leading" secondItem="HfS-bL-L7y" secondAttribute="leading" constant="20" id="CEI-Bn-bsz"/>
-                            <constraint firstItem="tcJ-um-jSm" firstAttribute="firstBaseline" secondItem="GMj-Lc-U1B" secondAttribute="baseline" constant="24" symbolType="layoutAnchor" id="D8s-FK-XFW"/>
                             <constraint firstItem="lml-6m-jm2" firstAttribute="leading" secondItem="tsh-Gj-baw" secondAttribute="trailing" constant="8" id="EDn-Kc-nvV"/>
                             <constraint firstItem="oWj-Zm-9Qs" firstAttribute="top" secondItem="tsh-Gj-baw" secondAttribute="bottom" constant="8" id="EvO-JB-d9G"/>
                             <constraint firstItem="y8p-Vv-uqx" firstAttribute="top" secondItem="ymy-xl-s6a" secondAttribute="bottom" constant="16" id="HOv-2A-aFt"/>
-                            <constraint firstItem="tcJ-um-jSm" firstAttribute="leading" secondItem="HfS-bL-L7y" secondAttribute="leading" constant="20" id="IoP-Ay-Gc5"/>
-                            <constraint firstItem="VgO-MS-UdN" firstAttribute="firstBaseline" secondItem="GMj-Lc-U1B" secondAttribute="baseline" constant="24" symbolType="layoutAnchor" id="JWr-Sa-q1l"/>
+                            <constraint firstItem="Bo5-ec-jrl" firstAttribute="leading" secondItem="HfS-bL-L7y" secondAttribute="leading" constant="20" id="S4H-rl-gpP"/>
+                            <constraint firstItem="VgO-MS-UdN" firstAttribute="centerY" secondItem="Bo5-ec-jrl" secondAttribute="centerY" id="Sgh-wQ-wXh"/>
                             <constraint firstItem="ymy-xl-s6a" firstAttribute="top" secondItem="HfS-bL-L7y" secondAttribute="top" id="T82-9D-Uvn"/>
                             <constraint firstItem="ymy-xl-s6a" firstAttribute="leading" secondItem="HfS-bL-L7y" secondAttribute="leading" id="TDb-rD-bA1"/>
-                            <constraint firstItem="VgO-MS-UdN" firstAttribute="leading" secondItem="tcJ-um-jSm" secondAttribute="trailing" constant="7" id="UNN-ww-hGK"/>
+                            <constraint firstItem="VgO-MS-UdN" firstAttribute="leading" secondItem="Bo5-ec-jrl" secondAttribute="trailing" constant="10" id="VbG-Qd-4m3"/>
                             <constraint firstItem="tsh-Gj-baw" firstAttribute="top" secondItem="P0e-ps-IeM" secondAttribute="bottom" constant="7.6699999999999999" id="WnN-9N-218"/>
                             <constraint firstItem="LMs-Sn-g9V" firstAttribute="centerY" secondItem="y8p-Vv-uqx" secondAttribute="centerY" id="XeX-Gw-jNJ"/>
                             <constraint firstItem="P0e-ps-IeM" firstAttribute="leading" secondItem="HfS-bL-L7y" secondAttribute="leading" constant="20" id="ZAn-ts-jfr"/>
                             <constraint firstItem="GMj-Lc-U1B" firstAttribute="firstBaseline" secondItem="oWj-Zm-9Qs" secondAttribute="baseline" constant="40" id="agD-1T-coh"/>
                             <constraint firstItem="HfS-bL-L7y" firstAttribute="bottom" secondItem="ymy-xl-s6a" secondAttribute="bottom" constant="371" id="bIK-Lz-fby"/>
                             <constraint firstItem="P0e-ps-IeM" firstAttribute="top" secondItem="y8p-Vv-uqx" secondAttribute="bottom" constant="20" id="cYs-iH-8HX"/>
+                            <constraint firstItem="Bo5-ec-jrl" firstAttribute="firstBaseline" secondItem="GMj-Lc-U1B" secondAttribute="baseline" constant="12.333333333333334" symbolType="layoutAnchor" id="eGS-72-NkE"/>
                             <constraint firstItem="LMs-Sn-g9V" firstAttribute="leading" secondItem="y8p-Vv-uqx" secondAttribute="trailing" constant="17" id="eZ1-wp-374"/>
                             <constraint firstItem="y8p-Vv-uqx" firstAttribute="leading" secondItem="HfS-bL-L7y" secondAttribute="leading" constant="20" id="gER-aJ-geK"/>
                             <constraint firstItem="9Fn-3Q-dhv" firstAttribute="firstBaseline" secondItem="oWj-Zm-9Qs" secondAttribute="baseline" constant="40" id="gr1-yt-Ft7"/>
@@ -248,6 +264,7 @@
     <resources>
         <image name="arrow.down.to.line" catalog="system" width="64" height="64"/>
         <image name="eye.fill" catalog="system" width="64" height="38"/>
+        <image name="heart.fill" catalog="system" width="64" height="54"/>
         <image name="pause.circle.fill" catalog="system" width="64" height="60"/>
     </resources>
 </document>

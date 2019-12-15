@@ -26,10 +26,11 @@ class PhotoInfoController: UIViewController {
             return
         }
         userImage.layer.cornerRadius = userImage.frame.width / 2
+        
         imageView.image = currentPhoto.regular
         userImage.image = currentPhoto.userImage
         userLabel.text = currentPhoto.name
-        descriptionLabel.text = currentPhoto.description
+        descriptionLabel.text = currentPhoto.description == "null" ? "-" : currentPhoto.description
         likeLabel.text = addDecimal(number: currentPhoto.like)
         ViewLabel.text = addDecimal(number: currentPhoto.view)
         downloadLabel.text = addDecimal(number: currentPhoto.download)
